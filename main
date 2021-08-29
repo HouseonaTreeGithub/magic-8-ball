@@ -1,0 +1,27 @@
+import random
+import time
+#current= 6 yes 3 so-s
+#Version 0.0.1 = Added main features, 4 "yes", 2 "so-so", 4 "no"
+#Version 0.0.2 = Added loop (flag)
+mylist = [" It is Certain.", "It is decidedly so.", "Without a doubt.", "As I see it, yes.", "Most likely.", "Defenitely yes",
+"Ask again later", "Reply hazy, try again.", "Better not tell you now." 
+"My reply is no", "My sources say no.", "Don't count on it.", "Very Doubtful"]
+
+def ball():
+    placeholder = input("What is your question for the magic 8 ball?")
+    print("You roll the ball.")
+    time.sleep(2)
+    print("And the answer is...")
+    time.sleep(1)
+    print(random.choice(mylist))
+
+
+
+flag = True
+while flag:
+    ball()
+    flag = input('Shake again? y/n') == 'y'
+
+
+
+print("Come shake again!")
